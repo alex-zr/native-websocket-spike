@@ -13,10 +13,10 @@ function setConnected(connected) {
 }
 
 function connect() {
-	ws = new WebSocket('ws://localhost:8080/name');
+	ws = new WebSocket('ws://localhost:8080/periodic');
 	ws.onmessage = function(data){
 		showGreeting(data.data);
-	}
+	};
 	 setConnected(true);
 }
 
